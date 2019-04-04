@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS User Panel</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https:///cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="services/profile.service.js"></script>
+    <script src="profile/index.controller.js"></script>
+    <script src="dashboard/index.controller.js"></script>
+    <script src="login/index.controller.js"></script>
+    <script src="sign-up/index.controller.js"></script>
+    <script src="services/user.service.js"></script>
+    <script src="users/index.controller.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="Main.IndexController" ng-cloak>
+    <md-toolbar class="md-theme-indigo" layout="row" layout-padding layout-align="space-between center">
+        <h1 class="md-toolbar-tools">Angular JS User Panel</h1>
+        <i ng-click="toggleLeft()" class="material-icons">menu</i>
+    </md-toolbar>
+    <ui-view></ui-view>
+</body>
+
+</html>

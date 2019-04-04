@@ -1,0 +1,38 @@
+<md-content layout="row" layout-align="center center">
+  <md-card layout="column" flex="30" layout-padding>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Profile</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content flex layout-padding>
+      <form name="profileForm" ng-submit="profileForm.$valid && vm.updateProfile()">
+        <md-input-container class="md-block">
+          <label>Username</label>
+          <input required md-no-asterisk name="username" ng-model="vm.profile.username">
+          <div ng-messages="profileForm.username.$error">
+            <div ng-message="required">*This field is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>First Name</label>
+          <input required name="firstName" ng-model="vm.profile.firstName">
+          <div ng-messages="profileForm.firstName.$error">
+            <div ng-message="required">*This field is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Last Name</label>
+          <input required name="lastName" ng-model="vm.profile.lastName">
+          <div ng-messages="profileForm.lastName.$error">
+            <div ng-message="required">*This field is required.</div>
+          </div>
+        </md-input-container>
+        <div>
+          <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+        </div>
+      </form>
+    </md-card-content>
+  </md-card>
+</md-content>

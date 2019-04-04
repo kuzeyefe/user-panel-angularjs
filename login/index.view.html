@@ -1,0 +1,36 @@
+<md-content layout="row" layout-align="center center">
+    <md-card layout="column" flex="30" layout-padding>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Login</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content  flex layout-padding>
+            <form name="form" ng-submit="form.$valid && vm.login()" novalidate>
+                <md-input-container class="md-block">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" ng-model="vm.user.username" required />
+                    <div ng-messages="form.username.$error" multiple md-auto-hide="false">
+                        <div ng-message="required">
+                            *This field is required
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" ng-model="vm.user.password" required />
+                    <div ng-messages="form.password.$error" multiple md-auto-hide="false">
+                        <div ng-message="required">
+                            *This field is required
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <md-button ng-disabled="!form.$valid" class="md-raised" ng-click="vm.login()">Login</md-button>
+                <md-button class="md-raised" ng-click="vm.signUp()">Sign Up</md-button>
+                <div ng-if="vm.error" class="alert alert-danger">{{vm.error}}</div>
+            </form>
+        </md-card-content>
+    </md-card>
+
+</md-content>

@@ -1,0 +1,24 @@
+<section layout="row" flex>
+
+
+   <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
+      <md-content layout-margin>
+         <ul>
+            <li>
+               <a ui-sref-active="active" ui-sref="dashboard.profile()">My Profile</a>
+            </li>
+            <li>
+               <a ui-sref="dashboard.users()">Users</a>
+            </li>
+            <li>
+               <a href="#/login">Logout</a>
+            </li>
+         </ul>
+      </md-content>
+   </md-sidenav>
+
+   <md-content flex layout-padding>
+      <ui-view></ui-view>
+   </md-content>
+
+</section>
